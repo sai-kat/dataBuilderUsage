@@ -1,14 +1,14 @@
-package databuilder;
+package databuilder.executors;
 
 import com.flipkart.databuilderframework.engine.*;
 import com.flipkart.databuilderframework.model.DataExecutionResponse;
 import com.flipkart.databuilderframework.model.DataFlow;
 import databuilder.builders.OutputTwoResolver;
 import databuilder.builders.TransactionSummaryResolver;
-import databuilder.data.ConsumerDetailsData;
-import databuilder.data.InputLevelOneData;
-import databuilder.data.MerchantDetailsData;
-import databuilder.data.OutputLevelTwoData;
+import databuilder.data.models.ConsumerDetailsData;
+import databuilder.data.models.InputLevelOneData;
+import databuilder.data.models.MerchantDetailsData;
+import databuilder.data.models.OutputLevelTwoData;
 
 import java.io.IOException;
 

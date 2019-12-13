@@ -4,9 +4,9 @@ import com.flipkart.databuilderframework.annotations.DataBuilderClassInfo;
 import com.flipkart.databuilderframework.engine.DataBuilder;
 import com.flipkart.databuilderframework.engine.DataBuilderContext;
 import com.flipkart.databuilderframework.model.Data;
-import databuilder.data.ConsumerDetailsData;
-import databuilder.data.MerchantDetailsData;
-import databuilder.data.TransactionSummary;
+import databuilder.data.models.ConsumerDetailsData;
+import databuilder.data.models.MerchantDetailsData;
+import databuilder.data.models.TransactionSummary;
 import lombok.val;
 
 import java.util.UUID;

@@ -4,9 +4,9 @@ import com.flipkart.databuilderframework.annotations.DataBuilderClassInfo;
 import com.flipkart.databuilderframework.engine.DataBuilder;
 import com.flipkart.databuilderframework.engine.DataBuilderContext;
 import com.flipkart.databuilderframework.model.Data;
-import databuilder.data.InputLevelOneData;
-import databuilder.data.OutputLevelTwoData;
-import databuilder.data.TransactionSummary;
+import databuilder.data.models.InputLevelOneData;
+import databuilder.data.models.OutputLevelTwoData;
+import databuilder.data.models.TransactionSummary;
 import lombok.val;
 
 @DataBuilderClassInfo(

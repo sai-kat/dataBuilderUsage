@@ -1,6 +1,6 @@
-package databuilder.data;
+package databuilder.data.models;
 
-import databuilder.DbfData;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -13,6 +13,9 @@ import javax.validation.constraints.NotNull;
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class ConsumerDetailsData extends DbfData<ConsumerDetailsData> {
+
+    @JsonIgnore
+    private long consumerId;
 
     @NotNull
     @NotEmpty

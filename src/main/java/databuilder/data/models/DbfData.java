@@ -1,4 +1,4 @@
-package databuilder;
+package databuilder.data.models;
 
 import com.flipkart.databuilderframework.model.Data;
 import com.flipkart.databuilderframework.model.DataAdapter;

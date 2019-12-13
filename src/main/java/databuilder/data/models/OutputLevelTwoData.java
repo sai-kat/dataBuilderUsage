@@ -1,6 +1,5 @@
-package databuilder.data;
+package databuilder.data.models;
 
-import databuilder.DbfData;
 import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -12,19 +11,19 @@ import javax.validation.constraints.NotNull;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
-public class InputLevelOneData extends DbfData<InputLevelOneData> {
+public class OutputLevelTwoData extends DbfData<OutputLevelTwoData> {
 
     @NotNull
     @NotEmpty
-    private String someInputValue;
+    private String someOutputValue;
 
     @Builder
-    public InputLevelOneData(String someInputValue) {
+    public OutputLevelTwoData(String someOutputValue) {
         this();
-        this.someInputValue = someInputValue;
+        this.someOutputValue = someOutputValue;
     }
 
-    protected InputLevelOneData() {
-        super(InputLevelOneData.class);
+    protected OutputLevelTwoData() {
+        super(OutputLevelTwoData.class);
     }
 }
