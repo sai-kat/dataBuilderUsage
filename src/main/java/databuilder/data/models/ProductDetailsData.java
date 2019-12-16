@@ -6,7 +6,6 @@ import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import org.hibernate.validator.constraints.NotEmpty;
 
-import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
@@ -26,16 +25,15 @@ public class ProductDetailsData extends DbfData<ProductDetailsData> {
     private String productDescription;
 
     @Min(1)
-    @Max(99)
-    private int quantity;
+    private int price;
 
     @Builder
-    public ProductDetailsData(long productId, String productName, String productDescription, int quantity) {
+    public ProductDetailsData(long productId, String productName, String productDescription, int price) {
         this();
         this.productId = productId;
         this.productName = productName;
         this.productDescription = productDescription;
-        this.quantity = quantity;
+        this.price = price;
     }
 
     public ProductDetailsData() {

@@ -6,25 +6,18 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.NotEmpty;
 
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
-@Data
 @Builder
-@AllArgsConstructor
+@Data
 @NoArgsConstructor
-public class CreateProductRequest {
+@AllArgsConstructor
+public class CreateDeliveryAddressRequest {
+    @NotNull
+    @NotEmpty
+    private String customerMobile;
 
     @NotNull
     @NotEmpty
-    private String productName;
-
-    @NotNull
-    @NotEmpty
-    private String productDescription;
-
-    @Min(1)
-    @Max(99)
-    private int price;
+    private String deliveryAddress;
 }

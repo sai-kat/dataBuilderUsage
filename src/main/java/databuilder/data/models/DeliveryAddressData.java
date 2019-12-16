@@ -11,24 +11,24 @@ import javax.validation.constraints.NotNull;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
-public class MerchantDetailsData extends DbfData<MerchantDetailsData> {
+public class DeliveryAddressData extends DbfData<DeliveryAddressData> {
 
     @NotNull
     @NotEmpty
-    private String merchantName;
+    private String customerMobile;
 
     @NotNull
     @NotEmpty
-    private String mobileNumber;
+    private String deliveryAddress;
 
     @Builder
-    public MerchantDetailsData(String merchantName, String mobileNumber) {
+    public DeliveryAddressData(String customerMobile, String deliveryAddress) {
         this();
-        this.merchantName = merchantName;
-        this.mobileNumber = mobileNumber;
+        this.customerMobile = customerMobile;
+        this.deliveryAddress = deliveryAddress;
     }
 
-    protected MerchantDetailsData() {
-        super(MerchantDetailsData.class);
+    protected DeliveryAddressData() {
+        super(DeliveryAddressData.class);
     }
 }

@@ -1,6 +1,8 @@
 package databuilder.data.db_managers.consumer;
 
-import com.flipkart.databuilderframework.model.DataDelta;
+import com.google.inject.Inject;
+import com.google.inject.Singleton;
+import databuilder.DataBuilderError;
 import databuilder.data.models.ConsumerDetailsData;
 import databuilder.data.models.requests.CreateConsumerRequest;
 import databuilder.data.persistence.StoredConsumerDetails;
@@ -8,8 +10,6 @@ import io.dropwizard.sharding.dao.RelationalDao;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;
 
-import javax.inject.Inject;
-import javax.inject.Singleton;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
@@ -35,16 +35,11 @@ public class DBConsumerManager implements ConsumerManager {
                     .build();
             Optional<ConsumerDetailsData> result = consumerDetailsRelationalDao.save(createConsumerRequest.getMobileNumber(), storedConsumerDetails)
                     .map(this :: toWired);
-
-            if(result.isPresent())
-                new DataDelta(result.get());
-
             return result.map(handler);
         }
         catch (Exception e){
-            System.out.println(e.getMessage());
+            throw new DataBuilderError("Could not create consumer");
         }
-        return Optional.empty();
     }
 
     @Override
@@ -64,9 +59,8 @@ public class DBConsumerManager implements ConsumerManager {
 
         }
         catch (Exception e){
-            System.out.println(e.getMessage());
+            throw new DataBuilderError("Could not get consumer");
         }
-        return Optional.empty();
     }
 
     @Override

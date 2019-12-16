@@ -31,7 +31,7 @@ public class StoredProductDetails {
     @Column(name = "product_description")
     private String productDescription;
 
-    @Column(name = "product_quantity", nullable = false)
-    private int quantity;
+    @Column(name = "product_price", nullable = false)
+    private int price;
 
 }

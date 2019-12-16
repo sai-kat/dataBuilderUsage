@@ -9,9 +9,9 @@ import java.util.function.Function;
 
 public interface ProductManager {
 
-    <T> Optional<T>  createProduct(CreateProductRequest createProductRequest, Function<ProductDetailsData, T> handler);
+    <T> Optional <T>  createProduct(CreateProductRequest createProductRequest, Function<ProductDetailsData, T> handler);
 
     <T> Optional <T> getProduct(String productName, Function<ProductDetailsData, T> handler);
 
-    <T> List<T> getProducts(Function<ProductDetailsData, T> handler);
+    <T> List <T> getProducts(Function<ProductDetailsData, T> handler);
 }

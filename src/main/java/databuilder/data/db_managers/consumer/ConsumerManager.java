@@ -13,5 +13,5 @@ public interface ConsumerManager {
 
     <T> Optional <T> getConsumer(String mobileNumber, Function<ConsumerDetailsData, T> handler);
 
-    <T> List<T> getConsumers(Function<ConsumerDetailsData, T> handler);
+    <T> List <T> getConsumers(Function<ConsumerDetailsData, T> handler);
 }
